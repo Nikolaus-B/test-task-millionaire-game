@@ -1,0 +1,27 @@
+@use "@/styles/base/variables" as v;
+
+.section {
+  background: v.$black-5;
+
+  @media screen and (min-width: v.$breakpoint-tablet) {
+    gap: 24px;
+  }
+}
+
+.textWrapper {
+  h3 {
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 32px);
+    line-height: 1.16;
+
+    margin-bottom: 8px;
+
+    color: v.$black-100;
+    opacity: 0.5;
+    text-align: left;
+
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+  }
+}

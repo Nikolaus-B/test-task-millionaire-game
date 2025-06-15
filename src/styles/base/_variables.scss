@@ -1,20 +1,46 @@
-// Colors
-$primary: #ff7e29;
-$success: #8bf4aa;
-$error: #ff9ca3;
-$text: #222;
-$bg: #fff9f4;
+// ==== Typography ====
 
-// Fonts
-$font-base: 16px;
-$font-sm: 14px;
-$font-lg: 18px;
+$font-family: var(--font-inter);
+$font-size-base: 16px;
 
-// Breakpoints
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+$fs-desktop: 32px;
+$fs-mobile: 18px;
+
+$lh-tight: 1.16;
+
+// ==== Colors ====
+
+$orange-120: #e87928;
+$orange-100: #ff8b37;
+$orange-80: #ffac70;
+$orange-5: #fff3eb;
+
+$green-100: #47d867;
+$green-5: #e6faea;
+
+$red-100: #ec6259;
+$red-5: #fdeeed;
+
+$black-100: #1c1c21;
+$black-40: #d0d0d8;
+$black-5: #f5f5f7;
+
+$white: #ffffff;
+
+// ==== Breakpoints ====
+
 $breakpoints: (
-  "mobile": 375px,
-  "tablet": 768px,
-  "desktop": 1280px,
-  "widescreen": 1920px,
-  "ultrawide": 2560px,
+  mobile: 375px,
+  tablet: 768px,
+  desktop: 1200px,
+  xl: 1440px,
 );
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+$breakpoint-xl: 1440px;

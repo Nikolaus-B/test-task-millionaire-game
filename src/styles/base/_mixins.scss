@@ -1,17 +1,12 @@
+@use "sass:map";
 @use "./variables" as v;
 
 @mixin respond($device) {
-  @if map-has-key(v.$breakpoints, $device) {
-    @media (max-width: map-get(v.$breakpoints, $device)) {
+  @if map.has-key(v.$breakpoints, $device) {
+    @media (max-width: map.get(v.$breakpoints, $device)) {
       @content;
     }
   } @else {
-    @warn 'No value found for breakpoint: #{$device}';
+    @warn "No value found for breakpoint: #{$device}";
   }
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

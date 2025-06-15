@@ -1,0 +1,37 @@
+@use "@/styles/base/variables" as v;
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 288px;
+  padding: 16px 24px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: v.$font-weight-semibold;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+
+  color: v.$white;
+  background-color: v.$orange-100;
+
+  @media screen and (min-width: v.$breakpoint-desktop) {
+    width: 296px;
+    padding: 20px 24px;
+
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: v.$orange-80;
+  }
+
+  &:active {
+    background-color: v.$orange-120;
+  }
+}

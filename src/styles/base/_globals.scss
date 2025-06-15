@@ -8,28 +8,83 @@
 
 html,
 body {
-  height: 100%;
-  font-family: "Segoe UI", sans-serif;
-  background-color: v.$bg;
-  color: v.$text;
-  font-size: v.$font-base;
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-family: v.$font-family;
+  font-size: v.$font-size-base;
+  color: v.$black-100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button {
+  all: unset;
   font-family: inherit;
   cursor: pointer;
-  border: none;
-  background: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.screen-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  width: 100%;
+  padding: 0px 80px;
+
+  @media screen and (max-width: v.$breakpoint-tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media screen and (max-width: v.$breakpoint-mobile) {
+    padding: 0 16px;
+  }
+
+  @media screen and (min-width: v.$breakpoint-desktop) {
+    padding-top: 229px;
+    padding-bottom: 304px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    min-width: 288px;
+
+    @media screen and (max-width: v.$breakpoint-tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 102px;
+
+      width: 100%;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
+      width: 624px;
+    }
+  }
+}
+
+.screen-img {
+  width: clamp(288px, 50vw, 624px);
   height: auto;
+  aspect-ratio: 624 / 367;
+}
+
+.screen-headline {
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.16;
+
+  text-align: left;
+
+  @media screen and (max-width: v.$breakpoint-desktop) {
+    text-align: center;
+  }
 }

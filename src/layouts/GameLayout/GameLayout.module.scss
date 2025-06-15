@@ -1,0 +1,11 @@
+@use "@/styles/base/variables" as v;
+@use "@/styles/base/mixins" as *;
+
+.main {
+  height: 100dvh;
+  max-width: map-get(v.$breakpoints, xl);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+}
