@@ -2,22 +2,23 @@
 
 import clsx from "clsx";
 import styles from "./Button.module.scss";
+import React from "react";
 
-type ButtonProps = {
+interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   variant?: string;
   className?: string;
   type?: "button" | "submit";
-};
+}
 
-export default function Button({
+const ButtonComponent = ({
   children,
   onClick,
   variant = "primary",
   className,
   type = "button",
-}: ButtonProps) {
+}: ButtonProps) => {
   return (
     <button
       type={type}
@@ -27,4 +28,7 @@ export default function Button({
       {children}
     </button>
   );
-}
+};
+
+export default React.memo(ButtonComponent);
+ButtonComponent.displayName = "Button";

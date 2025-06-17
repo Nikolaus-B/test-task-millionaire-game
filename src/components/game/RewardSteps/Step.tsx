@@ -3,13 +3,14 @@
 import { AnswerBgImage } from "@/assets/AnswerBgImage/AnswerBgImage";
 import styles from "./RewardSteps.module.scss";
 import clsx from "clsx";
+import React from "react";
 
 type StepProps = React.PropsWithChildren<{
   active?: boolean;
   inactive?: boolean;
 }>;
 
-export const Step = ({ active, inactive, children }: StepProps) => {
+const StepComponent = ({ active, inactive, children }: StepProps) => {
   return (
     <div
       className={clsx(styles.button, {
@@ -23,3 +24,6 @@ export const Step = ({ active, inactive, children }: StepProps) => {
     </div>
   );
 };
+
+export const Step = React.memo(StepComponent);
+Step.displayName = "Step";

@@ -1,34 +1,6 @@
 {
   "questions": [
     {
-      "id": "1",
-      "text": "How old your elder brother was 10 years before you was born, mate?",
-      "answers": [
-        "HyperText Markup Language",
-        "Hyper Transfer Markup Language",
-        "Home Tool Markup Language",
-        "Hyperlink and Text Markup Language"
-      ],
-      "amount": 100
-    },
-    {
-      "id": "2",
-      "text": "What does CSS stand for?",
-      "answers": [
-        "Creative Style Sheets",
-        "Cascading Style Sheets",
-        "Colorful Style Sheets",
-        "Computer Style Sheets"
-      ],
-      "amount": 200
-    },
-    {
-      "id": "3",
-      "text": "Which of the following are JavaScript frameworks?",
-      "answers": ["React", "Angular", "Laravel", "Vue"],
-      "amount": 300
-    },
-    {
       "id": "4",
       "text": "What does API stand for?",
       "answers": [

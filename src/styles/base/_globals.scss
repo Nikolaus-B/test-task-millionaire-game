@@ -1,4 +1,4 @@
-@use "./variables" as v;
+@import "./variables";
 
 * {
   box-sizing: border-box;
@@ -8,9 +8,9 @@
 
 html,
 body {
-  font-family: v.$font-family;
-  font-size: v.$font-size-base;
-  color: v.$black-100;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $black-100;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -53,16 +53,16 @@ ul {
   width: 100%;
   padding: 0px 80px;
 
-  @media screen and (max-width: v.$breakpoint-tablet) {
+  @media screen and (max-width: $breakpoint-tablet) {
     flex-direction: column;
     text-align: center;
   }
 
-  @media screen and (max-width: v.$breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile) {
     padding: 0 16px;
   }
 
-  @media screen and (min-width: v.$breakpoint-desktop) {
+  @media screen and (min-width: $breakpoint-desktop) {
     padding-top: 229px;
     padding-bottom: 304px;
   }
@@ -74,7 +74,7 @@ ul {
 
     min-width: 288px;
 
-    @media screen and (max-width: v.$breakpoint-tablet) {
+    @media screen and (max-width: $breakpoint-tablet) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -83,7 +83,7 @@ ul {
       width: 100%;
     }
 
-    @media screen and (min-width: v.$breakpoint-xl) {
+    @media screen and (min-width: $breakpoint-xl) {
       width: 624px;
     }
   }
@@ -102,7 +102,7 @@ ul {
 
   text-align: left;
 
-  @media screen and (max-width: v.$breakpoint-desktop) {
+  @media screen and (max-width: $breakpoint-desktop) {
     text-align: center;
   }
 }

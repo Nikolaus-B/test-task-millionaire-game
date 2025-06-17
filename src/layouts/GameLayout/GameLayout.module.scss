@@ -1,9 +1,8 @@
-@use "@/styles/base/variables" as v;
-@use "@/styles/base/mixins" as *;
+@import "@/styles/base/variables";
 
 .main {
   height: 100dvh;
-  max-width: map-get(v.$breakpoints, xl);
+  max-width: map-get($breakpoints, xl);
   margin: 0 auto;
 
   display: flex;

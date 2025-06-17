@@ -1,14 +1,18 @@
 import { correctAnswers } from "./correctAnswers";
-
+export interface CorrectAnswerData {
+  isCorrent: boolean;
+  questionAnswers: string[];
+}
 export function validateAnswer(
   questionId: string,
-  selectedAnswers: string[]
-): boolean {
-  const correct = correctAnswers[questionId];
-  if (!correct) return false;
+  selectedAnswer: string
+): CorrectAnswerData {
+  const questionAnswers = correctAnswers[questionId];
+  if (!questionAnswers)
+    return { isCorrent: false, questionAnswers: questionAnswers };
 
-  const selectedSorted = [...selectedAnswers].sort();
-  const correctSorted = [...correct].sort();
-
-  return JSON.stringify(selectedSorted) === JSON.stringify(correctSorted);
+  return {
+    isCorrent: questionAnswers.some((question) => question === selectedAnswer),
+    questionAnswers: questionAnswers,
+  };
 }

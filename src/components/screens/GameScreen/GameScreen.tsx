@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { fetchGameQuestions } from "@/redux/game/thunk";
 import { selectGameStore } from "@/redux/game/selectors";
-import Question from "@/components/game/Questions/Question";
+
 import { RewardSteps } from "@/components/game/RewardSteps/RewardSteps";
 import styles from "./GameScreen.module.scss";
 import Modal from "@/components/ui/Modal/Modal";
 
 import clsx from "clsx";
+import Image from "next/image";
+import { Question } from "@/components/game/Questions/Question";
 
 const GameScreen = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -32,7 +34,14 @@ const GameScreen = () => {
             className={styles.openModalBtn}
             onClick={() => setSidebarOpen(true)}
           >
-            open
+            <Image
+              src="/images/burger-menu.svg"
+              alt="Thumbs up"
+              className="screen-img"
+              width={280}
+              height={280}
+              priority
+            />
           </button>
           <RewardSteps
             questionsRewards={questionsRewards}

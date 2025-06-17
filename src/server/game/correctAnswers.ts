@@ -1,8 +1,5 @@
 export const correctAnswers: Record<string, string[]> = {
-  "1": ["HyperText Markup Language"],
-  "2": ["Cascading Style Sheets"],
-  "3": ["React", "Angular", "Vue"],
-  "4": ["Application Programming Interface"],
+  "4": ["Application Programming Interface", "Applied Protocol Interface"],
   "5": ["MongoDB"],
   "6": ["HTML", "CSS", "JavaScript"],
   "7": ["object"],

@@ -1,9 +1,9 @@
 @use "sass:map";
-@use "./variables" as v;
+@import "./variables";
 
 @mixin respond($device) {
-  @if map.has-key(v.$breakpoints, $device) {
-    @media (max-width: map.get(v.$breakpoints, $device)) {
+  @if map.has-key($breakpoints, $device) {
+    @media (max-width: map.get($breakpoints, $device)) {
       @content;
     }
   } @else {

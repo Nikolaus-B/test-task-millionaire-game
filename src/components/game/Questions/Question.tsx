@@ -1,28 +1,33 @@
 "use client";
 
-import React from "react";
-
+import React, { useMemo } from "react";
 import { GameQuestion } from "@/types/game";
-import AnswerOption from "@/components/ui/AnswerOption/AnswerOption";
 import styles from "./Question.module.scss";
+import { getLetterByIndex } from "@/utils/getLetterByIndex";
+import { AnswerOption } from "@/components/ui/AnswerOption/AnswerOption";
 
-type Props = {
+interface QuestionComponentProps {
   question: GameQuestion;
-};
+}
 
-const Question: React.FC<Props> = ({ question }) => {
+const QuestionComponent: React.FC<QuestionComponentProps> = ({ question }) => {
+  const options = useMemo(
+    () =>
+      question.answers.map((answer, index) => (
+        <li key={index}>
+          <AnswerOption letter={getLetterByIndex(index)}>{answer}</AnswerOption>
+        </li>
+      )),
+    [question.answers]
+  );
+
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>{question?.text}</h2>
-      <ul className={styles.questionList}>
-        {question.answers.map((answer, index) => (
-          <li key={index}>
-            <AnswerOption letter="A">{answer}</AnswerOption>
-          </li>
-        ))}
-      </ul>
+      <h2 className={styles.title}>{question.text}</h2>
+      <ul className={styles.questionList}>{options}</ul>
     </div>
   );
 };
 
-export default Question;
+export const Question = React.memo(QuestionComponent);
+QuestionComponent.displayName = "Question";

@@ -1,9 +1,9 @@
-@use "@/styles/base/variables" as v;
+@import "@/styles/base/variables";
 
 .section {
-  background: linear-gradient(to bottom right, #fff 50%, v.$orange-5 50%);
+  background: linear-gradient(to bottom right, #fff 50%, $orange-5 50%);
 
-  @media screen and (min-width: v.$breakpoint-tablet) {
+  @media screen and (min-width: $breakpoint-tablet) {
     gap: 24px;
   }
 }
