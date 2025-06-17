@@ -1,0 +1,50 @@
+@import "@/styles/base/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 395px;
+  padding: 133px 141px 122px 80px;
+
+  background-color: $black-5;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    gap: 97px;
+
+    padding: 136px 17px 24px;
+  }
+}
+
+.title {
+  font-weight: $font-weight-semibold;
+  line-height: $lh-tight;
+  color: $black-100;
+
+  width: 65%;
+
+  font-size: 32px;
+  text-align: left;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: 18px;
+    text-align: center;
+    width: auto;
+  }
+}
+
+.questionList {
+  width: 844px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 32px;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+  }
+}

@@ -1,0 +1,19 @@
+@import "@/styles/base/variables";
+
+.bgImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: $option-width-mobile;
+  height: $option-height-mobile;
+  color: $black-100;
+  cursor: pointer;
+  z-index: 2;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: $option-width-desktop;
+    height: $option-height-desktop;
+  }
+}

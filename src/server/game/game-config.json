@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "text": "How old your elder brother was 10 years before you was born, mate?",
+      "answers": [
+        "HyperText Markup Language",
+        "Hyper Transfer Markup Language",
+        "Home Tool Markup Language",
+        "Hyperlink and Text Markup Language"
+      ],
+      "amount": 100
+    },
+    {
+      "id": "2",
+      "text": "What does CSS stand for?",
+      "answers": [
+        "Creative Style Sheets",
+        "Cascading Style Sheets",
+        "Colorful Style Sheets",
+        "Computer Style Sheets"
+      ],
+      "amount": 200
+    },
+    {
+      "id": "3",
+      "text": "Which of the following are JavaScript frameworks?",
+      "answers": ["React", "Angular", "Laravel", "Vue"],
+      "amount": 300
+    },
+    {
+      "id": "4",
+      "text": "What does API stand for?",
+      "answers": [
+        "Application Programming Interface",
+        "Application Process Integration",
+        "Advanced Programming Instruction",
+        "Applied Protocol Interface"
+      ],
+      "amount": 500
+    },
+    {
+      "id": "5",
+      "text": "Which database uses collections instead of tables?",
+      "answers": ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
+      "amount": 1000
+    },
+    {
+      "id": "6",
+      "text": "Which languages are commonly used in web frontend?",
+      "answers": ["HTML", "Python", "CSS", "JavaScript"],
+      "amount": 2000
+    },
+    {
+      "id": "7",
+      "text": "What is the output of: typeof null in JavaScript?",
+      "answers": ["object", "null", "undefined", "number"],
+      "amount": 4000
+    },
+    {
+      "id": "8",
+      "text": "Which HTTP method is used to update a resource?",
+      "answers": ["GET", "PUT", "DELETE", "POST"],
+      "amount": 8000
+    },
+    {
+      "id": "9",
+      "text": "What is the default port for HTTPS?",
+      "answers": ["443", "80", "21", "22"],
+      "amount": 16000
+    },
+    {
+      "id": "10",
+      "text": "Which of the following are NoSQL databases?",
+      "answers": ["MongoDB", "Redis", "PostgreSQL", "Cassandra"],
+      "amount": 32000
+    },
+    {
+      "id": "11",
+      "text": "What is React primarily used for?",
+      "answers": [
+        "Styling websites",
+        "Managing server logic",
+        "Building user interfaces",
+        "Handling databases"
+      ],
+      "amount": 64000
+    },
+    {
+      "id": "12",
+      "text": "What does the 'this' keyword refer to in JavaScript?",
+      "answers": [
+        "Current function scope",
+        "The object that owns the current code",
+        "Global object",
+        "Function arguments"
+      ],
+      "amount": 125000
+    },
+    {
+      "id": "13",
+      "text": "What is the purpose of TypeScript?",
+      "answers": [
+        "Compile Java to JS",
+        "Add static typing to JavaScript",
+        "Style web pages",
+        "Speed up the web"
+      ],
+      "amount": 250000
+    },
+    {
+      "id": "14",
+      "text": "Which of the following are considered frontend frameworks?",
+      "answers": ["Vue", "Express", "Svelte", "Django"],
+      "amount": 500000
+    },
+    {
+      "id": "15",
+      "text": "What is the capital of web development?",
+      "answers": ["Browser", "HTML", "User", "There is none"],
+      "amount": 1000000
+    }
+  ]
+}

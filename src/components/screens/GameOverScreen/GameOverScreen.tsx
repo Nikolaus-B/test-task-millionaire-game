@@ -14,7 +14,7 @@ export default function GameOverScreen() {
       <Image
         src="/images/thumbs-up.svg"
         alt="Thumbs up"
-        className="screen-img "
+        className="screen-img"
         width={280}
         height={280}
         priority

@@ -1,0 +1,131 @@
+@import "@/styles/base/variables";
+
+@keyframes blink {
+  0%,
+  50% {
+    fill: $green-5;
+  }
+  51%,
+  100% {
+    fill: $white;
+  }
+}
+
+.button {
+  position: relative;
+
+  outline: none;
+  border: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media not all and (pointer: coarse) {
+    &:hover {
+      path {
+        stroke: $orange-100;
+      }
+
+      .line {
+        background-color: $orange-100;
+      }
+    }
+  }
+
+  &.selected {
+    path {
+      fill: $orange-5;
+      stroke: $orange-100;
+    }
+
+    .line {
+      background-color: $orange-100;
+    }
+  }
+
+  &.correct {
+    path {
+      fill: $green-5;
+      stroke: $green-100;
+      animation: blink 0.3s 3;
+    }
+
+    .line {
+      background-color: $green-100;
+    }
+  }
+
+  &.wrong {
+    path {
+      fill: $red-5;
+      stroke: $red-100;
+    }
+
+    .line {
+      background-color: $red-100;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.bgImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: $option-width-mobile;
+  height: $option-height-mobile;
+  color: $black-100;
+  cursor: pointer;
+  z-index: 2;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: $option-width-desktop;
+    height: $option-height-desktop;
+  }
+}
+
+.line {
+  position: absolute;
+  top: calc(($option-height-mobile / 2) - 0.5px);
+  left: -$option-line-width;
+  width: calc($option-width-mobile + ($option-line-width * 2));
+  height: 1px;
+  background-color: $black-40;
+  z-index: 1;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: calc($option-width-desktop + ($option-line-width * 2));
+    top: calc(($option-height-desktop / 2) - 0.5px);
+  }
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.letter {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $orange-100;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-100;
+}

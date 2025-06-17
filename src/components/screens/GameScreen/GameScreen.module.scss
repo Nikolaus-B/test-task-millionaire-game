@@ -1,0 +1,24 @@
+@import "@/styles/base/variables";
+
+.section {
+  position: relative;
+  display: flex;
+
+  height: 100%;
+}
+
+.openModalBtn {
+  position: absolute;
+  top: 16;
+  right: 16;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.sidebar {
+  @media screen and (max-width: $breakpoint-desktop) {
+    display: none;
+  }
+}

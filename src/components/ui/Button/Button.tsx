@@ -1,10 +1,12 @@
+"use client";
+
 import clsx from "clsx";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: "primary";
+  variant?: string;
   className?: string;
   type?: "button" | "submit";
 };
@@ -20,7 +22,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={clsx(styles.button, styles[variant], className)}
+      className={clsx(styles[variant], className)}
     >
       {children}
     </button>

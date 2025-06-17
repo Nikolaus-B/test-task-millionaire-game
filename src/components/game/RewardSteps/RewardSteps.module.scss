@@ -1,0 +1,98 @@
+@import "@/styles/base/variables";
+
+.container {
+  width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+
+  width: 100%;
+}
+
+$step-width-mobile: 240px;
+$step-height-mobile: 32px;
+$step-height-desktop: 40px;
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0;
+
+  svg,
+  path {
+    position: relative;
+    width: $step-width-mobile;
+    height: $step-height-mobile;
+    color: $black-100;
+    z-index: 2;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      height: $step-height-desktop;
+    }
+  }
+
+  &.active {
+    path {
+      stroke: $orange-100;
+    }
+
+    .optionText {
+      color: $orange-100;
+    }
+
+    .line {
+      background-color: $orange-100;
+    }
+  }
+
+  &.inactive {
+    path {
+      stroke: $black-40;
+    }
+
+    .optionText {
+      color: $black-40;
+    }
+
+    .line {
+      background-color: $black-40;
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  top: calc(($step-height-mobile / 2) - 0.5px);
+  width: 100%;
+  height: 1px;
+  background-color: $black-40;
+  z-index: 1;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    top: calc(($step-height-desktop / 2) - 0.5px);
+  }
+}
+
+.optionText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 3;
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-100;
+}
