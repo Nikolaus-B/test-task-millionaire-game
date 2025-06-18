@@ -1,5 +1,5 @@
 export const correctAnswers: Record<string, string[]> = {
-  "4": ["Application Programming Interface", "Applied Protocol Interface"],
+  "4": ["Application Programming Interface"],
   "5": ["MongoDB"],
   "6": ["HTML", "CSS", "JavaScript"],
   "7": ["object"],
