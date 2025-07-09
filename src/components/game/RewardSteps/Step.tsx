@@ -1,27 +1,30 @@
-"use client";
-
 import { AnswerBgImage } from "@/assets/AnswerBgImage/AnswerBgImage";
 import styles from "./RewardSteps.module.scss";
 import clsx from "clsx";
 import React from "react";
 
-type StepProps = React.PropsWithChildren<{
-  active?: boolean;
-  inactive?: boolean;
-}>;
+type StepProps = {
+  reward: number;
+  currentAmount: number;
+};
 
-const StepComponent = ({ active, inactive, children }: StepProps) => {
+const StepComponent = ({ reward, currentAmount }: StepProps) => {
+  const isActive = reward === currentAmount;
+  const isInactive = reward < currentAmount;
+
   return (
-    <div
-      className={clsx(styles.button, {
-        [styles.active]: active,
-        [styles.inactive]: inactive,
-      })}
-    >
-      <AnswerBgImage />
-      <div className={styles.line} />
-      <div className={styles.optionText}>{children}</div>
-    </div>
+    <li>
+      <div
+        className={clsx(styles.button, {
+          [styles.active]: isActive,
+          [styles.inactive]: isInactive,
+        })}
+      >
+        <AnswerBgImage />
+        <div className={styles.line} />
+        <div className={styles.optionText}>{`$${reward.toLocaleString()}`}</div>
+      </div>
+    </li>
   );
 };
 

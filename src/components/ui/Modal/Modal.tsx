@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 import styles from "./Modal.module.scss";
 import React from "react";
@@ -26,18 +26,15 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     e.stopPropagation();
   }, []);
 
-  const modalContent = useMemo(
-    () => (
-      <div className={styles.overlay} onClick={handleOverlayClick}>
-        <div className={styles.modal} onClick={handleModalClick}>
-          <button className={styles.close} onClick={onClose}>
-            &times;
-          </button>
-          {children}
-        </div>
+  const modalContent = (
+    <div className={styles.overlay} onClick={handleOverlayClick}>
+      <div className={styles.modal} onClick={handleModalClick}>
+        <button className={styles.close} onClick={onClose}>
+          &times;
+        </button>
+        {children}
       </div>
-    ),
-    [handleOverlayClick, handleModalClick, onClose, children]
+    </div>
   );
 
   if (!isOpen || !container) return null;
@@ -45,4 +42,4 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   return createPortal(modalContent, container);
 };
 
-export default React.memo(Modal);
+export default Modal;

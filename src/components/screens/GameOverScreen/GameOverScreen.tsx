@@ -18,6 +18,13 @@ export default function GameOverScreen() {
     dispatch(resetGame());
     router.push("/game");
   };
+
+  const formatedReward = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(score);
+
   return (
     <section className={clsx(styles.section, "screen-section")}>
       <Image
@@ -32,7 +39,7 @@ export default function GameOverScreen() {
       <div className="content">
         <div className={styles.textWrapper}>
           <h3>Total score:</h3>
-          <h4 className="screen-headline">${score} earned</h4>
+          <h4 className="screen-headline">{formatedReward} earned</h4>
         </div>
         <Button onClick={handleStartGameClick} variant="primary">
           Start

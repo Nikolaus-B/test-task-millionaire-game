@@ -1,5 +1,3 @@
-"use client";
-
 import clsx from "clsx";
 import styles from "./Button.module.scss";
 import React from "react";
@@ -30,5 +28,4 @@ const ButtonComponent = ({
   );
 };
 
-export default React.memo(ButtonComponent);
-ButtonComponent.displayName = "Button";
+export default ButtonComponent;
